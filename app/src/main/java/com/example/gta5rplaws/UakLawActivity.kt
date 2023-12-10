@@ -2,9 +2,11 @@ package com.example.gta5rplaws
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.widget.SearchView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import java.util.Locale
 
 class UakLawActivity : AppCompatActivity() {
 
@@ -28,7 +30,38 @@ class UakLawActivity : AppCompatActivity() {
         adapter = StatjaAdapter(mList)
         recyclerView.adapter = adapter
 
+        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                return false
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                filterList(newText)
+                return true
+            }
+
+        })
+
     }
+
+    private fun filterList(query: String?) {
+
+        if (query != null) {
+            val filteredList = ArrayList<StatjaData>()
+            for (i in mList) {
+                if (i.statjaText.lowercase(Locale.ROOT).contains(query)){
+                    filteredList.add(i)
+            }
+        }
+         if (filteredList.isEmpty()) {
+            Toast.makeText(this, "Не найдено!!!", Toast.LENGTH_LONG).show()
+        } else {
+            adapter.setFilteredList(filteredList)
+            }
+        }
+
+    }
+
 
     private fun addDataToList() {
         mList.add(StatjaData(1.1, "Преступлением признается виновно совершенное общественно опасное деяние (противоправное, осознанное, волевое, действие или бездействие, нарушающее или создавшее реальную угрозу нарушения общественных отношений, охраняемых Уголовным законодательством), запрещенное настоящим Кодексом под угрозой наказания." ))
@@ -173,7 +206,10 @@ class UakLawActivity : AppCompatActivity() {
                 "штраф в размере 10000 \$ на руководителя организации." ))
         mList.add(StatjaData(11.7, "* (АДМИНИСТРАТИВНАЯ) Предоставление недостоверной бюджетной отчетности или иных сведений при финансовой проверке\n" +
                 "штраф в размере суммы от расхождения +15000\$ на руководителя организации (Сумма расхождения уплачивается в казну организации нарушителя, 15000\$ уплачивается ответственному за проверку, 50% из которых уплачивается в казну GOV)." ))
-        mList.add(StatjaData(11.8, "val statjaNumber : Double" ))
+        mList.add(StatjaData(11.8, "** (ФЕДЕРАЛЬНАЯ) Нецелевое расходование бюджетных средств - Расходование бюджетных средств должностным лицом получателя бюджетных средств на цели, не соответствующие условиям их получения, определенным утвержденными бюджетом, бюджетной росписью, либо иным документом, являющимся основанием для получения бюджетных средств, совершенное в размере до 100.000\$\n" +
+                "6 лет лишения свободы с отбытием наказания в Федеральном Блоке. [1 час]- (при условии возмещения в полном объеме + штраф %50)\n" +
+                "\n" +
+                "12 лет лишения свободы с отбытием наказания в Федеральном Блоке. [2 часов]" ))
         mList.add(StatjaData(12.1, "val statjaNumber : Double" ))
         mList.add(StatjaData(12.2, "val statjaNumber : Double" ))
         mList.add(StatjaData(12.3, "val statjaNumber : Double" ))

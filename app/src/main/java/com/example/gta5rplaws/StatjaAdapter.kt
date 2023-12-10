@@ -15,6 +15,11 @@ class StatjaAdapter(var mList: List<StatjaData>) :
 
     }
 
+    fun setFilteredList(mList: List<StatjaData>){
+        this.mList = mList
+        notifyDataSetChanged()
+    }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): StatjaViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.each_item, parent, false)
         return StatjaViewHolder(view)

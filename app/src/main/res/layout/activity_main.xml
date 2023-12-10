@@ -43,7 +43,7 @@
             android:layout_height="100dp"
             android:layout_below="@+id/choice_explanation"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="50dp"
             app:cardCornerRadius="8dp"
             app:cardElevation="10dp">
 
@@ -80,7 +80,7 @@
             android:layout_height="100dp"
             android:layout_below="@+id/card_view_processualnij"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="40dp"
             android:paddingBottom="30dp"
             app:cardCornerRadius="8dp"
             app:cardElevation="10dp">
@@ -118,7 +118,7 @@
             android:layout_height="100dp"
             android:layout_below="@+id/card_view_UAK"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="40dp"
             android:paddingBottom="30dp"
             app:cardCornerRadius="8dp"
             app:cardElevation="10dp">
@@ -150,9 +150,46 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_ten_codes"
+            android:layout_width="300dp"
+            android:layout_height="100dp"
+            android:layout_below="@+id/card_view_road_codex"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:paddingBottom="30dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ten_four" />
+
+                <TextView
+                    android:id="@+id/ten_code_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#D7D8D2"
+                    android:textColor="#222222"
+                    android:fontFamily="@font/arima_madurai_medium"
+                    android:gravity="center"
+                    android:textSize="20dp"
+                    android:text="Тен Коды" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
             android:layout_width="wrap_content"
             android:layout_height="29dp"
-            android:layout_below="@+id/card_view_road_codex"
+            android:layout_below="@+id/card_view_ten_codes"
             android:layout_marginTop="10sp">
 
             <LinearLayout

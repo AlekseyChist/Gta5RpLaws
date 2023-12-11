@@ -12,17 +12,17 @@
         android:paddingBottom="30dp">
 
         <androidx.appcompat.widget.SearchView
-            android:id="@+id/searchViewProcess"
+            android:id="@+id/searchViewUak"
             android:layout_width="381dp"
             android:layout_height="wrap_content"
             app:iconifiedByDefault="false"
             app:queryHint="Поиск статей..." />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerViewProcess"
+            android:id="@+id/recyclerViewUak"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@+id/searchViewProcess"
+            android:layout_below="@+id/searchViewUak"
             android:layout_marginTop="18dp"
             android:elevation="8dp" />
 

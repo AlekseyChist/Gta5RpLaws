@@ -12,19 +12,20 @@
         android:paddingBottom="30dp">
 
         <androidx.appcompat.widget.SearchView
-            android:id="@+id/searchViewUak"
+            android:id="@+id/searchViewTenCode"
             android:layout_width="381dp"
             android:layout_height="wrap_content"
             app:iconifiedByDefault="false"
-            app:queryHint="Поиск статей..." />
+            app:queryHint="Поиск кодов..." />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerViewUak"
+            android:id="@+id/recyclerViewTenCode"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@+id/searchViewUak"
+            android:layout_below="@+id/searchViewTenCode"
             android:layout_marginTop="18dp"
             android:elevation="8dp" />
+
 
 
     </RelativeLayout>

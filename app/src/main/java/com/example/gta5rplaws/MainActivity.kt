@@ -33,5 +33,10 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val tenCodeCardView = findViewById<CardView>(R.id.card_view_ten_codes)
+        tenCodeCardView.setOnClickListener{
+            val intent = Intent(this, TenFour::class.java)
+            startActivity(intent)
+        }
     }
 }

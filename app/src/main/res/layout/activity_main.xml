@@ -1,27 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#D7D8D2">
+    android:background="@color/light_grey">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="20dp"
-        android:paddingBottom="30dp">
+        android:layout_height="wrap_content"
+        android:padding="5dp">
 
         <TextView
+            android:id="@+id/app_name_heading"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/app_name_heading"
-            android:text="Законодательная база "
-            android:textColor="#000000"
-            android:gravity="center"
             android:fontFamily="sans-serif-black"
+            android:gravity="center"
             android:paddingTop="10dp"
-            android:textSize="28dp"
-            />
+            android:text="@string/Law_base"
+            android:textColor="@color/text_color_black"
+            android:textSize="28sp" />
 
         <TextView
             android:id="@+id/choice_explanation"
@@ -30,22 +28,21 @@
             android:layout_below="@+id/app_name_heading"
             android:fontFamily="@font/arima_madurai_light"
             android:gravity="center"
-            android:text="Внизу приложены законы штата SA разбитые по основным направлениям"
-            android:textColor="#202020"
             android:paddingTop="20dp"
-            android:textSize="18dp" />
-
-
+            android:text="@string/under_heading_text"
+            android:textColor="@color/text_color_black"
+            android:textSize="18sp" />
 
         <androidx.cardview.widget.CardView
             android:id="@+id/card_view_processualnij"
-            android:layout_width="300dp"
-            android:layout_height="100dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_below="@+id/choice_explanation"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="50dp"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="10dp">
+            android:layout_marginTop="@dimen/margin_top_main"
+            android:layout_marginStart="@dimen/margin_main"
+            android:layout_marginEnd="@dimen/margin_main"
+            app:cardCornerRadius="@dimen/corner_radius"
+            app:cardElevation="@dimen/elevation">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -53,22 +50,16 @@
                 android:orientation="vertical">
 
                 <ImageView
+                    android:id="@+id/image_view"
                     android:layout_width="match_parent"
-                    android:layout_height="75dp"
+                    android:layout_height="@dimen/height_75dp"
                     android:scaleType="centerCrop"
                     android:src="@drawable/process" />
 
                 <TextView
+                    style="@style/TextViewStyle"
                     android:id="@+id/processualnij_color_text"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="#D7D8D2"
-                    android:textColor="#222222"
-                    android:fontFamily="@font/arima_madurai_medium"
-                    android:gravity="center"
-                    android:textSize="20dp"
-                    android:text="Процессуальный кодекс" />
-
+                    android:text="@string/process_codex"/>
 
             </LinearLayout>
 
@@ -76,14 +67,14 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/card_view_UAK"
-            android:layout_width="300dp"
-            android:layout_height="100dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_below="@+id/card_view_processualnij"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="40dp"
-            android:paddingBottom="30dp"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="10dp">
+            android:layout_marginTop="@dimen/margin_top_main"
+            android:layout_marginStart="@dimen/margin_main"
+            android:layout_marginEnd="@dimen/margin_main"
+            app:cardCornerRadius="@dimen/corner_radius"
+            app:cardElevation="@dimen/elevation">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -92,36 +83,29 @@
 
                 <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="75dp"
+                    android:layout_height="@dimen/height_75dp"
                     android:scaleType="centerCrop"
                     android:src="@drawable/ugolovno_administrativ" />
 
                 <TextView
                     android:id="@+id/self_color_text"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="#D7D8D2"
-                    android:textColor="#222222"
-                    android:fontFamily="@font/arima_madurai_medium"
-                    android:gravity="center"
-                    android:textSize="20dp"
-                    android:text="УАК" />
+                    style="@style/TextViewStyle"
+                    android:text="@string/UAK" />
 
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
 
-
         <androidx.cardview.widget.CardView
             android:id="@+id/card_view_road_codex"
-            android:layout_width="300dp"
-            android:layout_height="100dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_below="@+id/card_view_UAK"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="40dp"
-            android:paddingBottom="30dp"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="10dp">
+            android:layout_marginTop="@dimen/margin_top_main"
+            android:layout_marginStart="@dimen/margin_main"
+            android:layout_marginEnd="@dimen/margin_main"
+            app:cardCornerRadius="@dimen/corner_radius"
+            app:cardElevation="@dimen/elevation">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -130,20 +114,14 @@
 
                 <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="75dp"
+                    android:layout_height="@dimen/height_75dp"
                     android:scaleType="centerCrop"
                     android:src="@drawable/dorkod" />
 
                 <TextView
+                    style="@style/TextViewStyle"
                     android:id="@+id/road_color_text"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="#D7D8D2"
-                    android:textColor="#222222"
-                    android:fontFamily="@font/arima_madurai_medium"
-                    android:gravity="center"
-                    android:textSize="20dp"
-                    android:text="Дорожный Кодекс" />
+                    android:text="@string/road_laws"/>
 
             </LinearLayout>
 
@@ -151,14 +129,14 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/card_view_ten_codes"
-            android:layout_width="300dp"
-            android:layout_height="100dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_below="@+id/card_view_road_codex"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="40dp"
-            android:paddingBottom="30dp"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="10dp">
+            android:layout_marginTop="@dimen/margin_top_main"
+            android:layout_marginStart="@dimen/margin_main"
+            android:layout_marginEnd="@dimen/margin_main"
+            app:cardCornerRadius="@dimen/corner_radius"
+            app:cardElevation="@dimen/elevation">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -167,35 +145,29 @@
 
                 <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="75dp"
+                    android:layout_height="@dimen/height_75dp"
                     android:scaleType="centerCrop"
                     android:src="@drawable/ten_four" />
 
                 <TextView
+                    style="@style/TextViewStyle"
                     android:id="@+id/ten_code_text"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="#D7D8D2"
-                    android:textColor="#222222"
-                    android:fontFamily="@font/arima_madurai_medium"
-                    android:gravity="center"
-                    android:textSize="20dp"
-                    android:text="Тен Коды" />
+                    android:text="@string/ten_codes" />
 
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/card_view_autohor"
-            android:layout_width="300dp"
-            android:layout_height="70dp"
+            android:id="@+id/card_view_author"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_below="@+id/card_view_ten_codes"
-            android:layout_centerHorizontal="true"
             android:layout_marginTop="80dp"
-            android:paddingBottom="40dp"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="10dp">
+            android:layout_marginStart="@dimen/margin_main"
+            android:layout_marginEnd="@dimen/margin_main"
+            app:cardCornerRadius="@dimen/corner_radius"
+            app:cardElevation="@dimen/elevation">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -204,39 +176,19 @@
 
                 <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="75dp"
+                    android:layout_height="@dimen/height_75dp"
                     android:src="@drawable/author" />
 
                 <TextView
-                    android:id="@+id/auhor_color_text"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="#D7D8D2"
-                    android:textColor="#222222"
-                    android:fontFamily="@font/arima_madurai_medium"
-                    android:gravity="center"
-                    android:textSize="20dp"
-                    android:text="Created by Aleksei Chistiakov 12/12/2023" />
+                    style="@style/TextViewStyle"
+                    android:textSize="10sp"
+                    android:id="@+id/author_color_text"
+                    android:text="@string/created_by_aleksei_chistiakov_12_12_2023" />
 
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="wrap_content"
-            android:layout_height="29dp"
-            android:layout_below="@+id/card_view_autohor"
-            android:layout_marginTop="10sp">
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:paddingTop="0dp" />
-
-
-
-        </androidx.cardview.widget.CardView>
-
-        </RelativeLayout>
+    </RelativeLayout>
 
 </ScrollView>

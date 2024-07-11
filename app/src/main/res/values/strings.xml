@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Gta5RpLaws</string>
+    <string name="Law_base">Законодательная база</string>
+    <string name="under_heading_text">Внизу приложены законы штата SA разбитые по основным направлениям</string>
+    <string name="process_codex">Процессуальный кодекс</string>
+    <string name="UAK">УАК</string>
+    <string name="road_laws">Дорожный Кодекс</string>
+    <string name="ten_codes">Тен Коды</string>
+    <string name="created_by_aleksei_chistiakov_12_12_2023">Created by Aleksei Chistiakov 12/12/2023</string>
 </resources>

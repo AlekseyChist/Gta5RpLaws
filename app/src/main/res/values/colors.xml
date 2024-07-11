@@ -7,5 +7,7 @@
     <color name="background_color">#D7D8D2</color>
     <color name="widjet_text_color">#222222</color>
     <color name="light_grey">#D7D8D2</color>
+    <color name="each_item_back">#FDFDFD</color>
+    <color name="each_item_color">#4C4C4C</color>
 
 </resources>

@@ -10,9 +10,8 @@ class StatjaAdapter(var mList: List<StatjaData>) :
     RecyclerView.Adapter<StatjaAdapter.StatjaViewHolder>() {
 
     inner class StatjaViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val statjaText : TextView = itemView.findViewById(R.id.statjaText)
-        val statjaNumber : TextView = itemView.findViewById(R.id.statjaNB)
-
+        val statjaText: TextView = itemView.findViewById(R.id.statjaText)
+        val statjaNumber: TextView = itemView.findViewById(R.id.statjaNB)
     }
 
     fun setFilteredList(mList: List<StatjaData>){
@@ -32,6 +31,16 @@ class StatjaAdapter(var mList: List<StatjaData>) :
     override fun onBindViewHolder(holder: StatjaViewHolder, position: Int) {
         holder.statjaNumber.text = mList[position].statjaNumber.toString()
         holder.statjaText.text = mList[position].statjaText
-    }
 
+        var isExpanded = false
+
+        holder.statjaText.setOnClickListener {
+            if (isExpanded) {
+                holder.statjaText.maxLines = 5
+            } else {
+                holder.statjaText.maxLines = Int.MAX_VALUE
+            }
+            isExpanded = !isExpanded
+        }
+    }
 }

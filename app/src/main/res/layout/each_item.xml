@@ -11,16 +11,14 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#FDFDFD"
+        android:background="@color/each_item_back"
         android:padding="10dp">
-
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_alignRight="@+id/statjaText"
-            android:background="@color/background_color"
+            android:background="#959595"
             app:cardCornerRadius="100dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -46,14 +44,17 @@
 
         <TextView
             android:id="@+id/statjaText"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_alignStart="@id/cardView"
-            android:paddingLeft="70dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="70dp"
+            android:maxLines="5"
+            android:ellipsize="end"
             android:text="Здесь будет полное содержание статьиЗдесь будет полное содержание статьиЗдесь будет полное содержание статьиЗдесь будет полное содержание статьиЗдесь будет полное содержание статьи"
-            android:textColor="@color/black"
+            android:textColor="@android:color/black"
             android:textSize="12sp"
             android:textStyle="bold"
+            android:clickable="true"
+            android:focusable="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
